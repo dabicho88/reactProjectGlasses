@@ -1,0 +1,163 @@
+body{
+  margin: 0;
+  padding: 0 0;
+  font-family: sans-serif;
+}
+header{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  background-color: #fff;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 15px 8%;
+  border-bottom: 1px solid #6e83da;
+}
+header div{
+  display: flex;
+  width: auto;
+  height: auto;
+  position: relative;
+}
+header a,
+header a:visited{
+  display: block;
+  width: auto;
+  padding: 12px;
+  margin: 0;
+  color: #2b4281;
+  text-decoration: none;
+  z-index: 1;
+  position: relative;
+}
+header img{
+  display: block;
+  width: 110px;
+}
+footer{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 15px 8%;
+  background-color: #3c4b8b;
+  color: #fff;
+  text-align: center;
+}
+footer h3{
+  display: block; 
+  width: 100%;
+}
+.listado{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  width: clamp(320px, 90vw, 1200px);
+  margin: 80px auto;
+}
+.card{
+    width: 18%;
+  padding: 7px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 1%;
+}
+.propi{
+  font-size: 13px;
+  line-height: 15px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 200;
+  margin: 8px 0;
+}
+.valor{
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.card img{
+  display: block;
+  width: auto;
+  margin:auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height:190px;
+  position: relative;
+}
+.detallon{
+  display: flex;
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.detallon img{
+  width: 50%;
+  display: block;
+  height: auto;
+  margin: 0 12px 0 0;
+}
+.detallon p{
+  width: 50%;
+  display: block;
+  height: auto;
+  margin: 0 0 0 12px;
+}
+.detallon p span{
+  text-align: left;
+}
+@media screen and (max-width:1020px){
+.card{
+  width: 31%;
+}
+}
+@media screen and (max-width:450px){
+.card{
+  width: 45%;
+}
+header{
+  justify-content: center;
+}
+header div{
+  width: 100%;
+  justify-content: center;
+}
+.detallon{
+  flex-wrap: wrap;
+}
+.detallon img,
+.detallon p{
+  width: 100%;
+}
+.detallon p span{
+  text-align: center;
+}
+}

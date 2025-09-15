@@ -1,0 +1,104 @@
+{
+  "lentes": [
+    {
+      "id": "RB-001",
+      "tipo": "Aviador",
+      "nombre": "Ray-Ban Aviador Classic",
+      "precio": 153.99,
+      "genero": "hombre",
+      "foto": "https://flys.com/cdn/shop/files/SubKingDblBxSt_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Protección UV400", "Lentes polarizados", "Marco metálico"]
+    },
+    {
+      "id": "MERRY-001",
+      "tipo": "Deportivas",
+      "nombre": "MERRY'S Gafas de sol deportivas rectangulares",
+      "precio": 29.99,
+      "genero": "unisex",
+      "foto": "https://flys.com/cdn/shop/files/FlyDozer_891a8815-2897-469a-94bf-3cec3a947548_2000x.jpg",
+      "marca": "MERRY'S",
+      "caracteristicas": ["Lentes polarizados", "Protección UV400", "Diseño deportivo"] 
+    },
+    {
+      "id": "GUVIVI-001",
+      "tipo": "Aviador Retro",
+      "nombre": "GUVIVI Lentes de sol estilo aviador retro",
+      "precio": 24.99,
+      "genero": "mujer",
+      "foto": "https://flys.com/cdn/shop/files/FlyStingray_2000x.jpg",
+      "marca": "GUVIVI",
+      "caracteristicas": ["Estilo años 70", "Gran tamaño", "Diseño vintage"] 
+    },
+    {
+      "id": "RB-002",
+      "tipo": "Wayfarer",
+      "nombre": "Ray-Ban Wayfarer Classic",
+      "precio": 145.50,
+      "genero": "unisex",
+      "foto": "https://flys.com/cdn/shop/files/FlyDesperado225_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Estilo icónico", "Marco de acetato", "Lentes polarizados disponibles"] 
+    },
+    {
+      "id": "RB-003",
+      "tipo": "Round",
+      "nombre": "Ray-Ban Round Reverse",
+      "precio": 167.75,
+      "genero": "hombre",
+      "foto": "https://flys.com/cdn/shop/files/FlyDiablo25_c82e8555-547f-49c4-9c45-11f6049231f6_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Personalizable en REMIX", "Diseño circular", "Estilo retro moderno"] 
+    },
+    {
+      "id": "RB-004",
+      "tipo": "Envolventes",
+      "nombre": "Ray-Ban Balorama",
+      "precio": 189.99,
+      "genero": "hombre",
+      "foto": "https://flys.com/cdn/shop/files/SciFly8LTD23_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Diseño envolvente", "Estilo icónico", "Protección superior"] 
+    },
+    {
+      "id": "RB-005",
+      "tipo": "Tecnológicos",
+      "nombre": "Ray-Ban Meta",
+      "precio": 299.99,
+      "genero": "unisex",
+      "foto": "https://flys.com/cdn/shop/files/FlyDetector2_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Inteligencia artificial integrada", "Capacidad de grabación", "Tecnología portátil"] 
+    },
+    {
+      "id": "GUVIVI-002",
+      "tipo": "Aviador Cuadrado",
+      "nombre": "GUVIVI Lentes de sol cuadrados de aviador",
+      "precio": 26.99,
+      "genero": "mujer",
+      "foto": "https://flys.com/cdn/shop/files/SanteriaFly24_2000x.jpg",
+      "marca": "GUVIVI",
+      "caracteristicas": ["Sin enredos", "Estilo a la moda", "Gran tamaño"] 
+    },
+    {
+      "id": "MERRY-002",
+      "tipo": "Deportivas",
+      "nombre": "MERRY'S Gafas de sol para ciclismo",
+      "precio": 32.99,
+      "genero": "mujer",
+      "foto": "https://flys.com/cdn/shop/files/FlyJefe24_2000x.jpg",
+      "marca": "MERRY'S",
+      "caracteristicas": ["Diseño para deportes", "Lentes polarizados", "Protección UV400"] 
+    },
+    {
+      "id": "RB-006",
+      "tipo": "Clubmaster",
+      "nombre": "Ray-Ban Clubmaster Reinventado",
+      "precio": 155.25,
+      "genero": "hombre",
+      "foto": "https://flys.com/cdn/shop/files/MicroFly225_2000x.jpg",
+      "marca": "Ray-Ban",
+      "caracteristicas": ["Personalizable", "Estilo visionario", "Diseño semi-rimless"] 
+    }
+  ]
+}
