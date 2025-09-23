@@ -1,4 +1,5 @@
 import {useState, useEffect } from 'react'
+import { Counter } from './Counter'
 import { useParams } from 'react-router-dom'
 
 export function DetalleGafa() {
@@ -30,13 +31,14 @@ export function DetalleGafa() {
   return (
     <section className='detallon'>
       <img src={productoMatch.foto}/>
-      <p>
+      <div>
         <span className='propi'>Nombre</span><span className='valor'>{productoMatch.nombre}</span>
         <span className='propi'>Precio</span><span className='valor'>${productoMatch.precio}</span>
         <span className='propi'>Género</span><span className='valor'>{productoMatch.genero}</span>
         <span className='propi'>Tipo</span><span className='valor'>{productoMatch.tipo}</span>
         <span className='propi'>ID</span><span className='valor'>{productoMatch.id}</span>
-      </p>
+        <Counter/>
+      </div>
     </section>
 
     )  

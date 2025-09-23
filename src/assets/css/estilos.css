@@ -3,6 +3,10 @@ body{
   padding: 0 0;
   font-family: sans-serif;
 }
+.main{
+  background: #071ff7;
+  background: linear-gradient(0deg,rgba(7, 31, 247, 1) 22%, rgba(38, 47, 150, 1) 100%);
+}
 header{
   display: flex;
   flex-wrap:wrap;
@@ -12,7 +16,6 @@ header{
   align-items: center;
   align-content: center;
   position: relative;
-  background-color: #fff;
   z-index: 1;
   box-sizing: border-box;
   padding: 15px 8%;
@@ -20,7 +23,7 @@ header{
 }
 header div{
   display: flex;
-  width: auto;
+  width: calc(100% - 155px);
   height: auto;
   position: relative;
 }
@@ -30,14 +33,38 @@ header a:visited{
   width: auto;
   padding: 12px;
   margin: 0;
-  color: #2b4281;
+  color: #fff;
   text-decoration: none;
   z-index: 1;
   position: relative;
 }
 header img{
   display: block;
-  width: 110px;
+  width: 80px;
+}
+.boyGirl{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.boyGirl h1{
+  display: block;
+  width: 45%;
+  height: auto;
+  color: #fff;
+  font-size:clamp(10px, 50vw, 70px);
+  line-height: 85px;
+  text-align: right;
+}
+.boyGirl h1{
+  display: block;
+  width: 45%;
+  height: auto;
+  color: #fff;
 }
 footer{
   display: flex;
@@ -51,7 +78,7 @@ footer{
   z-index: 1;
   box-sizing: border-box;
   padding: 15px 8%;
-  background-color: #3c4b8b;
+  background-color: #11257d;
   color: #fff;
   text-align: center;
 }
@@ -62,15 +89,15 @@ footer h3{
 .listado{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   align-content: center;
   width: 100%;
   width: clamp(320px, 90vw, 1200px);
   margin: 80px auto;
 }
 .card{
-    width: 18%;
+  width: 18%;
   padding: 7px;
   position: relative;
   display: flex;
@@ -81,6 +108,62 @@ footer h3{
   overflow: hidden;
   box-sizing: border-box;
   margin: 1%;
+  background-color: #fff;
+  border-radius: 13px;
+}
+.card a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.addtoCart{
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #9290eb;
+  width: 80%;
+  height: 35px;
+  text-align: center;
+  color: #fff;
+  margin: 20px auto;
+  transition: all .13s ease;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.addtoCart:active{
+  transform:scale(1.1);
+}
+.addtoCart:hover{
+  background-color: #1b2ed6;
+}
+.add1{
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+.butCount{
+  display: inline-flex;
+  width: 25px;
+  line-height: 25px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: #fff;
+  color: #0e23e0;
+  border-radius: 200px;
+  font-size: 30px;
+}
+.totalItems{
+  width: 60px;
+  display: inline-block;
 }
 .propi{
   font-size: 13px;
@@ -133,6 +216,49 @@ footer h3{
 }
 .detallon p span{
   text-align: left;
+}
+.elCarrito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.elCarrito a,
+.elCarrito a:visited{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0;
+  z-index: 1;
+}
+.elCarrito img{
+  display: block;
+  width: 60%;
+  position: relative;
+  z-index: 1;
+  filter: brightness(0);
+}
+.elCarrito span{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #172393;
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
 }
 @media screen and (max-width:1020px){
 .card{
