@@ -9,13 +9,13 @@ export function Counter(){
 
     const increment = () => {
         const cuentaInmediata = setContador(contador +1)
+         valorEnContexto.mostrarenBadge(contador +1)
     }
 
     const decrement = () => {
         const cuentaInmediata = setContador(contador -1)
+         valorEnContexto.quitardelBadge(contador +1)
     }
-
-    valorEnContexto.mostrarenBadge(contador)
 
     return(
         <div className='addtoCart'>

@@ -3,6 +3,8 @@ import { Listcontainer } from './Listcontainer'
 import { DetalleGafa } from './DetalleGafa'
 import { Footer } from './Footer'
 import { Routes, Route } from 'react-router-dom'
+import { db } from '../datosFireB'
+import { addDoc, collection } from 'firebase/firestore'
 
 function App() {
   return (
