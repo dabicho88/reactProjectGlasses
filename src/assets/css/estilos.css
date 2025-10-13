@@ -228,6 +228,7 @@ footer h3{
   position: relative;
   border-radius: 20px;
   background-color: #fff;
+  transition: all .13s ease;
 }
 .elCarrito a,
 .elCarrito a:visited{
@@ -236,7 +237,11 @@ footer h3{
   height: 100%;
   position: absolute;
   padding: 0;
-  z-index: 1;
+  z-index: 2;
+  transition: all .13s ease;
+}
+.elCarrito:hover{
+  transform: scale(1.1);
 }
 .elCarrito img{
   display: block;

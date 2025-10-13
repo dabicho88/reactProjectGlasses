@@ -3,7 +3,7 @@ import ImgCarrito from '../assets/img/carrito.png'
 import { useContext } from 'react'
 import { ContextoGlass } from './ContextoGlass'
 
-export function Carrito(){
+export function Cart(){
 
     const valueContext = useContext(ContextoGlass)
 
@@ -11,7 +11,7 @@ export function Carrito(){
         <div className='elCarrito'>
         <UnLink clase='linkCarrito' seccion='/carrito'/>
         <img src={ImgCarrito}/>
-        <span>{valueContext.cantidadTotal}</span>
+        <span style={{display:valueContext.cantidadTotal <= 0? 'none' : 'flex'}}>{valueContext.cantidadTotal}</span>
         </div>
     )
     

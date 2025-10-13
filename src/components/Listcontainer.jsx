@@ -10,11 +10,16 @@ export function Listcontainer() {
   const elPath = window.location.href.toString()
   const [gafas, setGafas] = useState([])
   const catego = useParams()
+  let lasKeysEnLocal = []
+  for(let ki=0;ki < localStorage.length;ki++){
+    lasKeysEnLocal.push(localStorage.key(ki))
+  }
+
 
   useEffect(()=>{
   async function cargaItems(){
   try{
-    const cargaUno = await fetch('https://mocki.io/v1/d4093cdd-6d12-4b82-9a7b-2d5834e18c1b')
+    const cargaUno = await fetch('https://mocki.io/v1/626953f6-f27a-4cad-a07f-94f534d52bab')
      const cargaDos = await cargaUno.json()
      setGafas(cargaDos.lentes)
   }
@@ -28,9 +33,11 @@ export function Listcontainer() {
 
   elPath.includes(catego.gen ? gafasFilter = gafas.filter((len) => len.genero === catego.gen) : gafasFilter = gafas)
   
+  elPath.includes('carrito') ? gafasFilter = gafasFilter.filter((len) => lasKeysEnLocal.includes(String(len.id))) : gafasFilter = gafasFilter
+
   return (
     <section className='listado'>
-      {gafasFilter.map((len) => {
+      {gafasFilter.map(len => {
         return (
       <div className='card'>
         <UnLink seccion={`/gafas/${len.id}`} />
@@ -38,7 +45,7 @@ export function Listcontainer() {
         <span className='propi'>Nombre</span><span className='valor'>{len.nombre}</span>
         <span className='propi'>Precio</span><span className='valor'>${len.precio}</span>
         <span className='propi'>Género</span><span className='valor'>{len.genero}</span>
-        <Counter/>
+        <Counter elId={len.id}/>
       </div>
       )
       })}    

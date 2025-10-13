@@ -1,6 +1,6 @@
 import ElLogo from '../assets/img/elLogo.png'
 import { UnLink } from './UnLink'
-import { Carrito } from './Carrito'
+import { Cart } from './Cart'
 
 export function Header() {
   return (
@@ -12,7 +12,7 @@ export function Header() {
         <UnLink titleSeccion='Mujer' seccion='/categoria/mujer'/>
         <UnLink titleSeccion='Unisex' seccion='/categoria/unisex'/>
       </div>
-      <Carrito/>
+      <Cart/>
     </header>
 
     )  

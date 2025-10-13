@@ -3,8 +3,6 @@ import { Listcontainer } from './Listcontainer'
 import { DetalleGafa } from './DetalleGafa'
 import { Footer } from './Footer'
 import { Routes, Route } from 'react-router-dom'
-import { db } from '../datosFireB'
-import { addDoc, collection } from 'firebase/firestore'
 
 function App() {
   return (
@@ -14,6 +12,7 @@ function App() {
         <Route path='/' element={<Listcontainer/>}/>
         <Route path='/gafas/:id' element={<DetalleGafa/>}/>
         <Route path='/categoria/:gen' element={<Listcontainer/>}/>
+        <Route path='/carrito' element={<Listcontainer/>}/>
       </Routes>
       <Footer/>
   </div>

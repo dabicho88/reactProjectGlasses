@@ -1,31 +1,30 @@
 import { useState, createContext } from 'react'
-
 export const ContextoGlass = createContext()
+
+
 export function ContextoGlassEnvol(props){
+let valorInicialStorage = localStorage.getItem('valorStorageInicial')
+let valorIniciadorUseState
+valorInicialStorage == null ? valorIniciadorUseState = 0 :(valorInicialStorage < 0? valorIniciadorUseState = 0 : valorIniciadorUseState = valorInicialStorage)
 
-const [cantidadTotal, setCantidadTotal] = useState(0)
+const [cantidadTotal, setCantidadTotal] = useState(parseInt(valorIniciadorUseState))
+localStorage.setItem('valorStorageInicial', cantidadTotal)
 
-const mostrarenBadge = (elContador) => {
-   const totalFinal = cantidadTotal + elContador
-   setCantidadTotal(totalFinal)
+const mostrarenBadge = () => {
+    setCantidadTotal(cantidadTotal +1)
 }
-const quitardelBadge = (elContador) => {
-   const totalFinal = cantidadTotal - elContador
-   setCantidadTotal(totalFinal)
+const quitardelBadge = () => {
+   setCantidadTotal(cantidadTotal -1)
 }
 const borrarBadge = () => {
     setCantidadTotal(0)
 }
 
     const valorEnContexto = {
-        item: [],
-        price: 0,
         cantidadTotal:cantidadTotal,
         mostrarenBadge,
         quitardelBadge,
-        borrarBadge,
     }
-
     return(
             <ContextoGlass.Provider value={valorEnContexto}>
                 {props.children}

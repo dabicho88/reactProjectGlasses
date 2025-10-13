@@ -11,7 +11,7 @@ export function DetalleGafa() {
 
   async function cargaItems(){
   try{
-    const cargaUno = await fetch('https://mocki.io/v1/d4093cdd-6d12-4b82-9a7b-2d5834e18c1b')
+    const cargaUno = await fetch('https://mocki.io/v1/626953f6-f27a-4cad-a07f-94f534d52bab')
      const cargaDos = await cargaUno.json()
      setGafas(cargaDos.lentes)
   }
@@ -37,7 +37,7 @@ export function DetalleGafa() {
         <span className='propi'>Género</span><span className='valor'>{productoMatch.genero}</span>
         <span className='propi'>Tipo</span><span className='valor'>{productoMatch.tipo}</span>
         <span className='propi'>ID</span><span className='valor'>{productoMatch.id}</span>
-        <Counter/>
+        <Counter elId={productoMatch.id}/>
       </div>
     </section>
 
