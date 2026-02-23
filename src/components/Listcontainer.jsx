@@ -19,7 +19,7 @@ export function Listcontainer() {
   useEffect(()=>{
   async function cargaItems(){
   try{
-    const cargaUno = await fetch('https://mocki.io/v1/626953f6-f27a-4cad-a07f-94f534d52bab')
+    const cargaUno = await fetch('https://mocki.io/v1/afeb93de-03cf-4838-bc7d-769e0e0f13a1')
      const cargaDos = await cargaUno.json()
      setGafas(cargaDos.lentes)
   }
