@@ -7,11 +7,11 @@ export function Cart(){
   const [listLentes, setlistLentes] = useState([])
 
 	const params = useParams()
-
+	
   useEffect(()=>{
     async function getAllProductos(){
       try{
-        //const result1 = await fetch('https://mp9af92b2abd7234b469.free.beeceptor.com/gafaOscura')
+        //const result1 = await fetch('https://mp48a5621f883f13483f.free.beeceptor.com')
         const result1 = await fetch('../public/gafasDBtamaldulce.json')
         const result2 = await result1.json()
         setlistLentes(result2)
@@ -19,11 +19,11 @@ export function Cart(){
       catch(elError){
         console.log(elError)
       }
-
     }
     
     getAllProductos()
   },[])
+
 	return(
     <>
     <div className='contItemlist cart'>

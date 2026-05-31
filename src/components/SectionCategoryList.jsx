@@ -12,7 +12,7 @@ export function SectionCategoryList(){
   useEffect(()=>{
     async function getAllProductos(){
       try{
-        //const result1 = await fetch('https://mp9af92b2abd7234b469.free.beeceptor.com/gafaOscura')
+        //const result1 = await fetch('https://mp48a5621f883f13483f.free.beeceptor.com')
         const result1 = await fetch('../public/gafasDBtamaldulce.json')
         const result2 = await result1.json()
         setlistLentes(result2)
