@@ -18,7 +18,7 @@ function App() {
     <div className='main'>  
       <Header/>
       <Carrito/>
-      <Routes>
+      <Routes basename="/reactProjectGlasses">
         <Route path='/' element={<><SectionSlider/> <SectionBanners/> {Object.keys(sessionStorage).toString().includes('articulo')? <SectionCarouselRate/> : null}</>}/>
         <Route path='/:cat' element={<SectionCategoryList/>}/>
         <Route path='/cart' element={<Cart/>}/>
