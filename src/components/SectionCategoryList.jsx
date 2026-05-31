@@ -30,8 +30,8 @@ export function SectionCategoryList(){
     <div className='contItemlist'>
     <h2>{params.cat == 'man'? 'Hombre' : (params.cat == 'woman'? 'Mujeres' : undefined)}</h2>
        {listLentes.filter(gafa => gafa.gender == params.cat).map(gafa => 
-        <ItemList key={gafa.id} laImagen={gafa.img} eltitulo={gafa.title_name} elPrecio={gafa.price} elId={gafa.id} genere={gafa.gender}/>          )
-        }
+        <ItemList key={gafa.id} laImagen={gafa.img} eltitulo={gafa.title_name} elPrecio={gafa.price} elId={gafa.id} genere={gafa.gender} params={params.cat}/>
+        )}
     </div>
     <img className='bgCategory' src={params.cat == 'man'? manrecortado : (params.cat == 'woman'? womanrecortado : undefined)}/>
     </>

@@ -1,12 +1,12 @@
 import {ItemList} from './ItemList'
-import {Swiper, SwiperSlide} from 'swiper/react'
 import {useState, useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 
-import 'swiper/css';
-
-export function SectionCarouselRate(){
+export function Cart(){
 
   const [listLentes, setlistLentes] = useState([])
+
+	const params = useParams()
 
   useEffect(()=>{
     async function getAllProductos(){
@@ -24,28 +24,18 @@ export function SectionCarouselRate(){
     
     getAllProductos()
   },[])
-
 	return(
     <>
-    <h2>Últimos Vistos</h2>
-		<Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        centeredSlides={true}
-        modules={[]}
-        className="mySwiper swiperCustomGallery"
-      >
+    <div className='contItemlist cart'>
+    <h2>Carrito</h2>
         {listLentes.filter(gafa => 
-          sessionStorage.getItem(`articulo-${gafa.id}`) !== null
+          sessionStorage.getItem(`articulo-${gafa.id}`) > 0
           )
         .map(gafa => 
-          <SwiperSlide>
-            <ItemList key={gafa.id} laImagen={gafa.img} eltitulo={gafa.title_name} elPrecio={gafa.price} elId={gafa.id}/>
-          </SwiperSlide>
+            <ItemList key={gafa.id} laImagen={gafa.img} eltitulo={gafa.title_name} elPrecio={gafa.price} elId={gafa.id} price={gafa.price}/>
           )
         }
-        
-      </Swiper>
-      </>
+    </div>
+    </>
 		)
 }

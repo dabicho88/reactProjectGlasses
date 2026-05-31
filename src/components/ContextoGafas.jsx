@@ -24,7 +24,7 @@ export function EnvoltorioContextoGafa(props){
 		const prevsecTotCart = totCart - eq1
 		settotCart(prevsecTotCart)
 	}
-	
+
 	const valorContextoGafas = {
 		totCart,
 		masTot,

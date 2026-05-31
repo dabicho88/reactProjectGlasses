@@ -41,6 +41,7 @@ export function ItemList(props){
 				</>
 				}
 			</div>
+			<div className='totalItem'><span>$</span>{props.price * cantidadUnidades}</div>
 		</div>
 		)
 }
